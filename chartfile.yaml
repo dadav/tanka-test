@@ -1,0 +1,10 @@
+directory: charts
+repositories:
+- name: stable
+  url: https://charts.helm.sh/stable
+- name: rocket
+  url: https://rocketchat.github.io/helm-charts
+requires:
+- chart: rocket/rocketchat
+  version: 6.4.4
+version: 1
