@@ -3,5 +3,5 @@ local rocket = import 'rocket.libsonnet';
 
 {
   local ns = 'foo',
-  rocketchatInstance: rocket.newRocketChat('bar', ns),
+  rocketchatInstance: rocket.newRocketChat('kakakakaka', ns),
 }
