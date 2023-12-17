@@ -10,13 +10,13 @@ local newRocketChat(name, ns) = tanka.k8s.patchKubernetesObjects(helm.template(n
         rootPassword: 'rocketchatroot',
       },
     },
-    extraEnv: {
-      INITIAL_USER: 'yes',
-      ADMIN_USERNAME: 'admin',
-      ADMIN_NAME: 'admin',
-      ADMIN_PASS: 'admin',
-      ADMIN_EMAIL: 'admin@localhost',
-    },
+    extraEnv: [
+      { name: 'INITIAL_USER', value: 'yes' },
+      { name: 'ADMIN_USERNAME', value: 'admin' },
+      { name: 'ADMIN_NAME', value: 'admin' },
+      { name: 'ADMIN_PASS', value: 'admin' },
+      { name: 'ADMIN_EMAIL', value: 'admin@localhost' },
+    ],
   },
 }), {
   metadata+: {
